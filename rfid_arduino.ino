@@ -145,7 +145,7 @@ void loop () {
 void verificarRFID(String IDrfid){
   Process verificar;
   verificar.begin("python");
-  verificar.addParameter("/mnt/sda1/arduino/python/base1.py");
+  verificar.addParameter("/mnt/sda1/arduino/python/comprobar.py");
   verificar.addParameter(IDrfid); // Esta es el resultado de la variable argv[1] del programa Python
   verificar.run();
   while (verificar.available()){
